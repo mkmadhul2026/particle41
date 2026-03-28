@@ -36,7 +36,7 @@ module "eks" {
   cluster_version = "1.29"
 
   vpc_id     = module.vpc.vpc_id
-  subnet_ids = module.vpc.private_subnets   # ✅ private only
+  subnet_ids = module.vpc.private_subnets
 
   ############################
   # Node Group
@@ -49,7 +49,7 @@ module "eks" {
 
       instance_types = ["m6a.large"]
 
-      subnet_ids = module.vpc.private_subnets  # ✅ private only
+      subnet_ids = module.vpc.private_subnets
     }
   }
 
