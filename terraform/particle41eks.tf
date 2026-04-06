@@ -184,14 +184,3 @@ resource "aws_eks_node_group" "nodes" {
     aws_iam_role_policy_attachment.cni_policy
   ]
 }
-
-############################
-# Outputs
-############################
-output "vpc_id" {
-  value = aws_vpc.main.id
-}
-
-output "cluster_name" {
-  value = aws_eks_cluster.eks.name
-}
